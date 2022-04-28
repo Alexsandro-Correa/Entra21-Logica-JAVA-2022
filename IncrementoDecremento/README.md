@@ -1,6 +1,6 @@
 # Aprendendo sobre incremento e decremento
 
-##Formas:
+## Formas:
 
 -Pré incremento ou pré decremento
 
