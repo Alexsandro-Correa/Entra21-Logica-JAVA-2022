@@ -92,6 +92,9 @@ public class Main {
 				JOptionPane.showInputDialog("Informe seu salário")
 				);
 		JOptionPane.showMessageDialog(null, "Tá bom, você ganha " + salario + " reais.");
+		
+		
+		
 	}
 
 }
