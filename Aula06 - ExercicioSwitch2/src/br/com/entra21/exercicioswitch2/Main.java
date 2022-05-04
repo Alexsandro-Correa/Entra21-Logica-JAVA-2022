@@ -12,28 +12,30 @@ Azul
 Amarelo
 Vermelho*/
 		
-		System.out.println("Qual é a sua cor favorita? ");
 		String opcao;
 		Scanner entrada = new Scanner(System.in);
 		
-		System.out.println("\nVerde");
-		System.out.println("Azul");
-		System.out.println("Amarelo");
-		System.out.println("Vermelho");
+		System.out.println("Qual é a sua cor favorita entre as opções? \n\nVerde\nAzul\nAmarelo\nVermelho");
+				
+	
 		
 		opcao = entrada.next();
 		
 		switch(opcao) {
 		case "Verde":
+		case "verde":
 			System.out.println("\nVerde, a cor da esperança.");
 			break;
 		case "Azul":
+		case "azul":
 			System.out.println("\nAzul, a cor do mar.");
 			break;
 		case "Amarelo":
+		case "amarelo":
 			System.out.println("\nAmarelo, a cor da amizade.");
 			break;
 		case "Vermelho":
+		case "vermelho":
 			System.out.println("\nVermelho, a cor do amor.");
 			break;
 		default:

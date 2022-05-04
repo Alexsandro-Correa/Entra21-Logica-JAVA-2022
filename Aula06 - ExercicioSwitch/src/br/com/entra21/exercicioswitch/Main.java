@@ -14,11 +14,11 @@ public class Main {
 		4 = Verão 
 		*/
 		
-		
-		
-		System.out.println("Qual é a usa estação do ano favorita? ");
 		byte opcao;
 		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Qual é a usa estação do ano favorita? ");
+		
 		
 		System.out.println("\n1 = Primavera");
 		System.out.println("2 = Outono");

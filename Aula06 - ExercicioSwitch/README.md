@@ -1,4 +1,4 @@
-# Exercício switch
+# Exercício sobre switch com inteiro
 
 ##Exiba em tela uma lista de opções para o usuário escolher e para cada escolha retornar uma mensagem diferente. 
 		
