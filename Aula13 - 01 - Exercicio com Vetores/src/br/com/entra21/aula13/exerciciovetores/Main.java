@@ -9,19 +9,11 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		byte menu;
 
-	
-
-	
-
-		
-
 		do {
-			
-			
+
 			// utilizando do-while porque me permite entrar no bloco antes de testar a
 			// condição de permanência
 			System.out.println(escreverMenu());
-			
 
 			menu = input.nextByte();
 
@@ -32,7 +24,7 @@ public class Main {
 				break;
 
 			case 1:
-				exibirTamanhoVetores(); //chamada de método
+				exibirTamanhoVetores(); // chamada de método
 				break;
 
 			case 2:
@@ -52,7 +44,7 @@ public class Main {
 				break;
 
 			case 6:
-				exibirVetorInteiroNaoInicializado ();
+				exibirVetorInteiroNaoInicializado();
 				break;
 
 			default:
@@ -65,8 +57,6 @@ public class Main {
 
 		System.out.println("Obrigado por executar o programa!");
 	}
-
-	
 
 	public static void exibirTamanhoVetores() {
 
@@ -124,87 +114,88 @@ public class Main {
 		}
 
 	}
-	
+
 	public static void definirTamanhoVetorParaInicializar() {
-		
+
 		Scanner input = new Scanner(System.in);
 		byte tamanho;
 		byte vetorBytes[];
-		
+
 		System.out.println("Informe o tamanho do vetor:");
 		tamanho = input.nextByte();
-		
+
 		vetorBytes = new byte[tamanho];
-		
-		for(byte contador = 0; contador < vetorBytes.length; contador++) {
-		
-			System.out.println("Informe o valor para o item " + (contador+1) + " no índice [" + contador + "]" );
+
+		for (byte contador = 0; contador < vetorBytes.length; contador++) {
+
+			System.out.println("Informe o valor para o item " + (contador + 1) + " no índice [" + contador + "]");
 			vetorBytes[contador] = input.nextByte();
 		}
-		
-		
+
 	}
-	
+
 	public static void percorrerVetorInicializadoCrescenteDecrescente() {
-		
-		byte vetorBytes[] = {3,9,15,23,5,16};
-		
-		for(byte contador = 0; contador < vetorBytes.length; contador++) {
-			
+
+		byte vetorBytes[] = { 3, 9, 15, 23, 5, 16 };
+
+		for (byte contador = 0; contador < vetorBytes.length; contador++) {
+
 			System.out.println(vetorBytes[contador]);
-			
+
 		}
-		
+
 		System.out.println("------------------------");
-		
-		for(byte contador = (byte) (vetorBytes.length -1); contador >= 0; contador-- ) {
-			//começando com o tamanho -1, porque o índice sempre tem um valor a menos
-			//condição de permanência, enquanto meu contador for maior que zero, comece com um valor alto
-			//e prettendo para não chegar ao zero
-			//como uma repetição decrescente utilizo o decremento no contador
-			
+
+		for (byte contador = (byte) (vetorBytes.length - 1); contador >= 0; contador--) {
+			// começando com o tamanho -1, porque o índice sempre tem um valor a menos
+			// condição de permanência, enquanto meu contador for maior que zero, comece com
+			// um valor alto
+			// e prettendo para não chegar ao zero
+			// como uma repetição decrescente utilizo o decremento no contador
+
 			System.out.println(vetorBytes[contador]);
 		}
-		
+
 	}
-	
-	public static void exibirVetorInteiroNaoInicializado () {
-		
+
+	public static void exibirVetorInteiroNaoInicializado() {
+
 		String resposta;
 		byte index = 0;
 		byte vetorBytes[] = new byte[10];
 		Scanner input = new Scanner(System.in);
-		
-		
+
 		do {
 			System.out.println("Informe o valor para o índice [" + index + "]");
 			vetorBytes[index] = input.nextByte();
-			
+
 			System.out.println("Gostaria de inicializar outro índice?");
 			resposta = input.next();
-			
-			if(resposta.equalsIgnoreCase("sim")) {
-				
+
+			if (resposta.equalsIgnoreCase("sim")) {
+
 				do {
-					System.out.println("Informe um índice válido entre 0 e " + (vetorBytes.length-1));
-					index = input.nextByte(); //se o usuário digitar um valor válido esse index será usado no meu DO principal onde a lógica se repete
-					
-				}while(index < 0 || index >= vetorBytes.length); //a posição escolhida não pode ser menos do que zero nem o tamanho do vetor ou superior
-				//exemplo: o range válido é de 0(zero)a 9(nove), qualquer número além disso fica preso nesse loop
+					System.out.println("Informe um índice válido entre 0 e " + (vetorBytes.length - 1));
+					index = input.nextByte(); // se o usuário digitar um valor válido esse index será usado no meu DO
+												// principal onde a lógica se repete
+
+				} while (index < 0 || index >= vetorBytes.length); // a posição escolhida não pode ser menos do que zero
+																	// nem o tamanho do vetor ou superior
+				// exemplo: o range válido é de 0(zero)a 9(nove), qualquer número além disso
+				// fica preso nesse loop
 			}
-			
-			
-		}while(resposta.equalsIgnoreCase("sim"));
-		
-		for(byte contador = 0; contador < vetorBytes.length; contador++) {
-			
+
+		} while (resposta.equalsIgnoreCase("sim"));
+
+		for (byte contador = 0; contador < vetorBytes.length; contador++) {
+
 			System.out.println("vetorBytes [" + contador + "] = " + vetorBytes[contador]);
-			
+
 		}
 	}
 
 	public static String escreverMenu() {
-		
+
 		String menu = "";
 		menu += "Menu:\n";
 		menu += "0 - Sair\n";
@@ -214,10 +205,8 @@ public class Main {
 		menu += "4 - Criar um vetor com o tamanho informado pelo usuário e depois solicitar que o usuário\n";
 		menu += "5 - Criar um vetor de inteiros inicializado , para percorrer:\n\tDo inicio ao fim\n\tDo fim ao inicio\n\tPara exibir os valores\n";
 		menu += "\"6 - Criar um vetor de inteiros não inicializado";
-		
-		
-		
+
 		return menu;
-		
+
 	}
 }
