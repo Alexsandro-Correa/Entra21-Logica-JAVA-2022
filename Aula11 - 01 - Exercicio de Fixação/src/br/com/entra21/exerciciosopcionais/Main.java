@@ -194,6 +194,7 @@ public class Main {
 		byte zeroACem = 0;
 		
 		for(byte contador = 1; contador <=3; contador++) {
+			
 			System.out.println("Digite um número");
 			numero = entrada.nextInt();
 			
