@@ -1,1 +1,0 @@
-# Exercício cálculo de perímetro e área.
