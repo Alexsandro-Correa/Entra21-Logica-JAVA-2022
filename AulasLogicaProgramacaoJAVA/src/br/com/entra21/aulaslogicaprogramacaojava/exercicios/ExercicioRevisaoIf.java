@@ -1,10 +1,59 @@
-package br.com.entra21.exerciciorevisao.if2;
+package br.com.entra21.aulaslogicaprogramacaojava.exercicios;
 
 import java.util.Scanner;
 
-public class Main {
+public class ExercicioRevisaoIf {
 
-	public static void main(String[] args) {
+	static Scanner entrada = new Scanner(System.in);
+	static float altura;
+	static String nome;
+	public ExercicioRevisaoIf() {
+		
+		
+		System.out.println("1 - Exercício 1 (if)");
+		System.out.println("2 - Exercício 2 (if)");
+		byte option;
+		option = entrada.nextByte();
+		
+		switch(option) {
+		
+		case 1:
+			exercicioRevisaoIf1();
+			break;
+			
+		case 2:
+			exercicioRevisaoIf2();
+			break;
+		
+		}
+	}
+	
+	private static void exercicioRevisaoIf1() {
+		/*Escreva um programa que:
+		Defina como constante a altura minima permitida para entrar em um brinquedo (Atenção a nomenclatura e utilize a constante no IF)
+		Capture nome e altura do usuário
+		Validar se a altura informada é MENOR que a permitida
+		Caso seja MENOR informar de forma educada mencionando o nome do usuário e sua altura qual o parâmetro minimo para entrar no brinquedo
+		Caso não seja MENOR informar que a entrada está liberada. */
+		
+		
+		
+		System.out.println("Por favor, digite o seu nome: ");
+		nome = entrada.next();
+		
+		System.out.println("\n" +nome + ", agora digite a sua altura:");
+		altura = entrada.nextFloat();
+		
+		if(altura < 1.60) {
+			System.out.println("Desculpe " + nome + ", mas você não possui a altura mínima para este brinquedo.");
+			
+		}else {
+			System.out.println("\nOlá " + nome + ", pode entrar no brinquedo" );
+		}
+		
+	}
+	
+	private static void exercicioRevisaoIf2() {
 		/*Escreva um programa que:
 		Defina como constante a quantidade de notas de um aluno
 		Capture nome e cada uma das notas
@@ -17,9 +66,8 @@ public class Main {
 		senão se, nota maxima (=10)
 		senão (tem algo de errado com o seu calculo de média)*/
 		
-		String nome;
 		float nota1, nota2, nota3, nota4, media;
-		Scanner entrada = new Scanner(System.in);
+		
 		
 		System.out.println("Insira seu nome:");
 		nome = entrada.next();
@@ -49,7 +97,6 @@ public class Main {
 		}else {
 			System.out.println("Tem algo errado com seu cálculo de média.");
 		}
-		
-		}
-
+	}
+	
 }

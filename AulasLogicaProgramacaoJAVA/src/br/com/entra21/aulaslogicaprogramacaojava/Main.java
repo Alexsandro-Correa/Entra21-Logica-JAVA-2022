@@ -5,10 +5,16 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import br.com.entra21.aulaslogicaprogramacaojava.condicao_if_else.CondicionaisIfElse;
+import br.com.entra21.aulaslogicaprogramacaojava.condicao_switch_case.CondicionalSwitchCase;
+import br.com.entra21.aulaslogicaprogramacaojava.estruturas_de_repeticao.EstruturasDeRepeticao;
 import br.com.entra21.aulaslogicaprogramacaojava.exercicios.Exercicios;
+import br.com.entra21.aulaslogicaprogramacaojava.funcoes.Funcoes;
+import br.com.entra21.aulaslogicaprogramacaojava.matrizes.Matrizes;
 import br.com.entra21.aulaslogicaprogramacaojava.operadores_arit_incre_decrement.OperadoresAritIncreDecre;
 import br.com.entra21.aulaslogicaprogramacaojava.operadores_igualdade_relac_logicos.OperadoresIgualdadeRelacionaisLogicos;
+import br.com.entra21.aulaslogicaprogramacaojava.prova.Provas;
 import br.com.entra21.aulaslogicaprogramacaojava.vars_constantes.VariaveisEConstantes;
+import br.com.entra21.aulaslogicaprogramacaojava.vetores.Vetores;
 
 public class Main {
 
@@ -55,23 +61,31 @@ public class Main {
 				break;
 
 			case 5:
-
+				new CondicionalSwitchCase("Estrutura de Condição switch/case",
+						new ArrayList<String>(Arrays.asList("Estrutura de Condição switch/case"))).writeAllMenus();
 				break;
 
 			case 6:
-
+				new Funcoes("Funções", new ArrayList<String>(Arrays.asList("Aprender Funções"))).writeAllMenus();
 				break;
 
 			case 7:
-
+				new EstruturasDeRepeticao("Estruturas de Repetição for, while e do while",
+						new ArrayList<String>(
+								Arrays.asList("Estrutura de Repetição for", "Estrutura de repetição while e do while")))
+						.writeAllMenus();
 				break;
 
 			case 8:
-
+				new Vetores("Vetores", new ArrayList<String>(
+						Arrays.asList("Declarar Vetores", "Acessar Índices", "Atualizar Valores", "Média com Vetores")))
+						.writeAllMenus();
 				break;
 
 			case 9:
-
+				new Matrizes("Matrizes",
+						new ArrayList<String>(Arrays.asList("Matrizes Simples", "Matrizes Inicializadas")))
+						.writeAllMenus();
 				break;
 
 			case 10:
@@ -80,9 +94,14 @@ public class Main {
 								"Exercício Cálculo IMC", "Exercício Conversor de Temperatura",
 								"Exercício Média Aritmética", "Exercício Preço de Custo",
 								"Exercício Operador de Igualdade", "Exercício Operador Lógico",
-								"Exercício Operador Relacional", "Exercício IfElse")))
+								"Exercício Operador Relacional", "Exercício IfElse", "Exercícios de Revisão if",
+								"Exercícios de Revisão switch/case", "Exercício Calculadora 2", "Exercício Currículo",
+								"Exercício de Fixação de Repetição","Exercício com Vetores", "Exercício com Matrizes")))
 						.writeAllMenus();
 				break;
+
+			case 11:
+				new Provas("Provas", new ArrayList<String>(Arrays.asList("Prova 1", "Prova 2"))).writeAllMenus();
 
 			default:
 				System.out.println("Opção inválida,tente novamente:");
@@ -105,11 +124,12 @@ public class Main {
 		menu += "\n\t3 - Operadores de Igualdade, Relacionais e Lógicos";
 		menu += "\n\t4 - Estruturas de condição: if, else e else if";
 		menu += "\n\t5 - Estruturas de condição: switch/case";
-		menu += "\n\t6 - Estrutura de repetição: for";
-		menu += "\n\t7 - Estrutura de repetição: while e do while";
+		menu += "\n\t6 - Funções";
+		menu += "\n\t7 - Estrutura de repetição: for, while e do while";
 		menu += "\n\t8 - Vetores";
 		menu += "\n\t9 - Matrizes";
 		menu += "\n\t10 - Exercícios";
+		menu += "\n\t11 - Provas";
 
 		return menu;
 	}
