@@ -1,3 +1,3 @@
-# entra21-aulas-orientacao-objetos
+# entra21-aulas-lógica-de-programação
 
-Repositório dedicado as aulas de orientação a objeto
+Repositório dedicado as aulas de lógica de programação com JAVA
